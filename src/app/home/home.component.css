@@ -260,11 +260,11 @@ a:hover {
 }
 
 .slider1 {
-  width: 90%;
+  width: 100%;
+  margin-top: 2%;
   height: 100px;
   position: relative;
   background: #ffffff;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
   display: flex;
   overflow: hidden;
 }

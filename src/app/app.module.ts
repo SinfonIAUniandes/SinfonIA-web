@@ -9,24 +9,31 @@ import { RouterModule, Routes } from '@angular/router';
 import { ToolsComponent } from './tools/tools.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { GSPRComponent } from './GSPR/GSPR.component';
+import { RobowflexComponent } from './robowflex/robowflex.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'tools', component: ToolsComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: '', redirectTo: '/home', pathMatch: "full"},
-  { path: '**', component: PageNotFoundComponent},
+  { path: 'GSPR', component: GSPRComponent },
+  { path: 'robowflex', component: RobowflexComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
+
 @NgModule({
-  declarations: [				
+  declarations: [						
       AppComponent,
       AboutComponent,
       HomeComponent,
       ToolsComponent,
       PageNotFoundComponent,
       ProjectsComponent,
+      GSPRComponent,
+      RobowflexComponent
    ],
   imports: [
     BrowserModule,

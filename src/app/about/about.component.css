@@ -90,7 +90,7 @@
   
   #timeline {
     display: flex;
-    background-color: #b2d4e6;
+    background-color: #ffffff;
   }
   
   #timeline:hover .tl-item {
@@ -156,8 +156,6 @@
   .tl-item:hover .tl-bg {
     filter: grayscale(0);
   }
-
-  
   
   .tl-content {
     transform: translate3d(0, 0, 0) translateY(25px);
@@ -219,3 +217,17 @@
   transition-delay: 0.1s;
 }
 
+@media (max-width: 768px) {
+  #timeline {
+    flex-direction: column;
+  }
+
+  .tl-item {
+    width: 100%;
+  }
+
+  .tl-item:hover {
+    width: 100% !important;
+  }
+
+}

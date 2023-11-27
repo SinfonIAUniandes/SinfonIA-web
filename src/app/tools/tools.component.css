@@ -54,7 +54,7 @@
     margin-left: 2%;
 }
 
-section {
+.section {
     margin-bottom: 5%;
     margin-top: 5%;
     font-family: Montserrat, sans-serif;
@@ -68,6 +68,10 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+    .btn {
+        font-size: 40%;
+    }
+
     .contenedor {
         flex-direction: column;
     }
