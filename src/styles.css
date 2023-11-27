@@ -1,23 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
-.body {
-    color: #1a1b1f;
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
+body {
+  color: #1a1b1f;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
   }
 
-  .paragraph-light {
-    opacity: .6;
-    margin-right: 56px;
-    text-align: left;
-    font-family: Montserrat, sans-serif;
-    text-align: justify;
+.paragraph-light {
+  opacity: .6;
+  margin-right: 56px;
+  font-family: Montserrat, sans-serif;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.paragraph-light1 {
+  opacity: .6;
+  margin-right: 56px;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.paragraph-light2 {
+  opacity: .6;
+  margin-right: 56px;
+  font-family: Montserrat, sans-serif;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 100%; /* Asegura que el párrafo no se extienda más allá del contenedor */
+  font-size: 0.9em; /* Tamaño de fuente relativo al tamaño del texto original */
+  line-height: 1.4; /* Espaciado entre líneas */
 }
 
 .heading-3 {
   text-align:center;
   font-weight: 300;
   font-family: Montserrat, sans-serif;
+}
+
+.h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .paragraph-light {
+    font-size: 12px;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+
+  }
 }

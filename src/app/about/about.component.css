@@ -29,8 +29,16 @@
   .img-about {
     width: 100% !important;
   }
-  
-  
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-about {
+    width: 180% !important;
+  }
 }
 
 .img-about {
@@ -68,25 +76,9 @@
     padding-top: 1%;
     margin-left: 10%;
   }
-  
-  
-  h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 46px;
-    text-align: left;
-    font-family: Montserrat, sans-serif;
-  }
 
   /* Timeline */
 
-  .heading-3 {
-    text-align:center;
-    font-weight: 300;
-    font-family: Montserrat, sans-serif;
-  }
   
   #timeline {
     display: flex;
