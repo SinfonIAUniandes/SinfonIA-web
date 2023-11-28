@@ -1,9 +1,9 @@
   <!-- navbar -------------------------------------------------------------------------------------------------------------------->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid" data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" style="background-color: white;">
+  <div class="container-fluid">
     <div class="navigation-items">
     <a class="navbar-brand" href="#">
-      <img src="https://electricayelectronica.uniandes.edu.co/sites/default/files/estudiantes/SinfonIA.png" alt="LogoSinfonia" width="120" sizes="104px" srcset="" class="d-inline-block align-text-top" style="margin-left: 30%;">
+      <img src="https://electricayelectronica.uniandes.edu.co/sites/default/files/estudiantes/SinfonIA.png" alt="LogoSinfonia" width="120" sizes="104px" srcset="" class="d-inline-block align-text-top"  style="margin-left: 30%;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,8 +19,12 @@
         <li class="nav-item">
           <a class="nav-link navigation-item w-nav-link w--current" routerLink="tools" routerLinkActive="active">Our team</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navigation-item w-nav-link w--current" routerLink="projects" routerLinkActive="active">Projects</a>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle navigation-item w-nav-link w--current" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li ><a class="dropdown-item navigation-item w-nav-link w--current" routerLink="projects" routerLinkActive="active">All projects</a></li>
+            <li><a class="dropdown-item navigation-item w-nav-link w--current" href="#">TDP 2024</a></li>
+          </ul>
         </li>
       </ul>
     </div>
