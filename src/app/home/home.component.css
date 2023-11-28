@@ -273,7 +273,7 @@ a:hover {
   height: 100px;
   display: flex;
   align-items: center;
-  animation: slideshow 10s linear infinite;
+  animation: slideshow 11s linear infinite;
 }
 
 .slide1 img {

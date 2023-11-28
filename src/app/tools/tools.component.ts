@@ -194,6 +194,33 @@ export class ToolsComponent implements OnInit {
         },
       }
     });
+
+    const swiper8 = new Swiper('#swiper-administrative .slide-content', {
+      slidesPerView: 4,
+      spaceBetween: 25,
+      loop: true,
+      modules: [Navigation, Pagination],
+      navigation: {
+        nextEl: '#swiper-administrative .swiper-button-next',
+        prevEl: '#swiper-administrative .swiper-button-prev',
+      },
+      pagination: {
+        el: '#swiper-administrative .swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        520: {
+          slidesPerView: 2,
+        },
+        950: {
+          slidesPerView: 4,
+        },
+      }
+    });
     
   }
 

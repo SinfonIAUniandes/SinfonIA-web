@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { GSPRComponent } from './GSPR/GSPR.component';
 import { RobowflexComponent } from './robowflex/robowflex.component';
+import { WebRemoteComponent } from './webRemote/webRemote.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,13 +20,14 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'GSPR', component: GSPRComponent },
   { path: 'robowflex', component: RobowflexComponent },
+  { path: 'webRemote', component: WebRemoteComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
 
 @NgModule({
-  declarations: [						
+  declarations: [							
       AppComponent,
       AboutComponent,
       HomeComponent,
@@ -33,7 +35,8 @@ const routes: Routes = [
       PageNotFoundComponent,
       ProjectsComponent,
       GSPRComponent,
-      RobowflexComponent
+      RobowflexComponent,
+      WebRemoteComponent
    ],
   imports: [
     BrowserModule,

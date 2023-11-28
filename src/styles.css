@@ -31,9 +31,9 @@ body {
   font-family: Montserrat, sans-serif;
   text-align: justify;
   margin: 0 auto;
-  max-width: 100%; /* Asegura que el párrafo no se extienda más allá del contenedor */
-  font-size: 0.9em; /* Tamaño de fuente relativo al tamaño del texto original */
-  line-height: 1.4; /* Espaciado entre líneas */
+  max-width: 100%;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 .heading-3 {
@@ -54,8 +54,8 @@ body {
 
 @media only screen and (max-width: 600px) {
   .paragraph-light {
-    font-size: 12px;
-    text-align: center;
+    font-size: 14px;
+    text-align: justify;
     font-family: Montserrat, sans-serif;
 
   }
