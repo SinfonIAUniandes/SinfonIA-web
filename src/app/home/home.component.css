@@ -3,7 +3,6 @@
   max-height: 80vh;
   width: auto;
   height: auto;
-  background-image: linear-gradient(to right, lightblue, darkblue)
 }
 
 
@@ -284,25 +283,4 @@ a:hover {
 @keyframes slideshow {
   0% {transform: translateX(0);}
   100% {transform: translateX(-100%);}
-}
-
-.slider1::before,
-.slider1::after {
-  height: 100px;
-  width: 200px;
-  position: absolute;
-  content: "";
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
-}
-
-.slider1::before {
-  left: 0;
-  top: 0;
-}
-
-.slider1::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg );
 }

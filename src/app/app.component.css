@@ -207,3 +207,7 @@
 .active {
     color: #69c8d9;
 }
+
+.navigation-item.active {
+    background-color: white;
+}

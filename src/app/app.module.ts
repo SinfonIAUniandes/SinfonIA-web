@@ -12,6 +12,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { GSPRComponent } from './GSPR/GSPR.component';
 import { RobowflexComponent } from './robowflex/robowflex.component';
 import { WebRemoteComponent } from './webRemote/webRemote.component';
+import { TDP2023Component } from './TDP2023/TDP2023.component';
+import { VideosComponent } from './videos/videos.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,13 +23,15 @@ const routes: Routes = [
   { path: 'GSPR', component: GSPRComponent },
   { path: 'robowflex', component: RobowflexComponent },
   { path: 'webRemote', component: WebRemoteComponent },
+  { path: 'tdp', component: TDP2023Component },
+  { path: 'videos', component: VideosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
 
 @NgModule({
-  declarations: [							
+  declarations: [									
       AppComponent,
       AboutComponent,
       HomeComponent,
@@ -36,7 +40,9 @@ const routes: Routes = [
       ProjectsComponent,
       GSPRComponent,
       RobowflexComponent,
-      WebRemoteComponent
+      WebRemoteComponent,
+      TDP2023Component,
+      VideosComponent
    ],
   imports: [
     BrowserModule,
