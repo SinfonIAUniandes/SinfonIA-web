@@ -75,3 +75,17 @@
     text-align: left;
     font-family: Montserrat, sans-serif;
 }
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  height: 100vh;
+}
+
+iframe {
+  width: 80%; /* Ancho del 80% del contenedor */
+  max-width: 1000px; /* Ancho máximo de 1000px */
+  height: 100%; /* Altura del 80% del viewport */
+}
