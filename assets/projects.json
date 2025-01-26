@@ -1,0 +1,154 @@
+{
+  "proyectos": [
+    {
+      "id": 1,
+      "titulo": "GPSR autonomy through different large language models",
+      "fecha": "2023",
+      "contenido": "The idea with this is to give autonomy to the robot thanks to the processing of instructions using a large language model like GPT or Llama",
+      "imagen": "assets/Sinfonia-Architecture.jpg",
+      "tags": ["Task", "Thesis"],
+      "estado": "Done",
+      "link": "/GSPR"
+    },
+    {
+      "id": 2,
+      "titulo": "Web Remote Controller",
+      "fecha": "2023",
+      "contenido": "It focuses on the implementation of a local web server that uses vueJS, django and ros to interact with the robot's toolkit, allowing control and monitoring from web devices.",
+      "imagen": "assets/pepper-gamepad-header.jpg",
+      "tags": ["Interface"],
+      "estado": "In progress",
+      "link": "/webRemote"
+    },
+    {
+      "id": 3,
+      "titulo": "Chess Computer Vision Module in Pepper Robot",
+      "fecha": "2025",
+      "contenido": "Developing a computer vision module for Pepper Robot to play chess by recognizing and interpreting the chessboard and pieces.",
+      "imagen": "https://picsum.photos/1000/1002",
+      "tags": ["Computer Vision", "Game"],
+      "estado": "In progress",
+      "link": "/chessCV"
+    },
+    {
+      "id": 4,
+      "titulo": "Voice Cloning for Pepper",
+      "fecha": "2025",
+      "contenido": "Developing voice cloning capabilities for Pepper robot to mimic human voices accurately.",
+      "imagen": "assets/Voice-Cloning.png",
+      "tags": ["Voice Cloning", "AI"],
+      "estado": "Planned",
+      "link": "/voiceCloning"
+    },
+    {
+      "id": 5,
+      "titulo": "Implementation of an LAA Architecture (Large Language Model-Augmented Autonomous Agent) in Social Robots to Enhance Autonomous Task Execution",
+      "fecha": "2025",
+      "contenido": "Integrating a Large Language Model-Augmented Autonomous Agent architecture in social robots to improve their autonomous task execution capabilities.",
+      "imagen": "assets/meltingpot.gif",
+      "tags": ["LAA", "Autonomous Agent", "Thesis"],
+      "estado": "Planned",
+      "link": "/LAAArchitecture"
+    },
+    {
+      "id": 6,
+      "titulo": "AI Song Covers for Pepper",
+      "fecha": "2025",
+      "contenido": "Creating AI-generated song covers for Pepper robot to perform.",
+      "imagen": "assets/aisong-cover.png",
+      "tags": ["AI", "Music"],
+      "estado": "Planned",
+      "link": "/aiSongCovers"
+    },
+    {
+      "id": 7,
+      "titulo": "Google Mediapipe Models integration in ROS",
+      "fecha": "2025",
+      "contenido": "This project aims to integrate Google Mediapipe models into ROS for enhanced perception capabilities in robots.",
+      "imagen": "assets/mediapipe.jpg",
+      "tags": ["Perception", "Integration"],
+      "estado": "Planned",
+      "link": "/mediapipe"
+    },
+    {
+      "id": 8,
+      "titulo": "Body Tracking targeting human imitation on Pepper Robot",
+      "fecha": "2025",
+      "contenido": "Implementing body tracking algorithms to enable Pepper Robot to imitate human movements accurately.",
+      "imagen": "assets/bodytrack.png",
+      "tags": ["Body Tracking", "Imitation"],
+      "estado": "Planned",
+      "link": "/bodyTracking"
+    },
+    {
+      "id": 9,
+      "titulo": "Computer Vision and Machine Learning basics course targeting ROS environments for usage in Pepper Robots",
+      "fecha": "2025",
+      "contenido": "Creating a comprehensive course on computer vision and machine learning basics, specifically designed for ROS environments and Pepper Robots.",
+      "imagen": "https://picsum.photos/1000/1004",
+      "tags": ["Course", "Education"],
+      "estado": "Planned",
+      "link": "/cvmlCourse"
+    },
+    {
+      "id": 10,
+      "titulo": "AI training pipeline in HPC cluster for integration in Pepper Robots",
+      "fecha": "2025",
+      "contenido": "Developing an AI training pipeline using HPC clusters to enhance the capabilities of Pepper Robots.",
+      "imagen": "https://picsum.photos/1000/1005",
+      "tags": ["AI", "HPC"],
+      "estado": "Planned",
+      "link": "/aiHPC"
+    },
+    {
+      "id": 11,
+      "titulo": "Mapping University Space with Humanoid Robot Pepper",
+      "fecha": "2021",
+      "contenido": "This project delves into the navigation domain, specifically exploring a robot's ability to generate maps of environments and self-locate. Focused on the humanoid robot Pepper, the study centers on understanding the RTAB-Map (Real-Time Appearance Based Mapping) library of ROS. This library employs a graph-based SLAM approach to map static scenes. The project involves studying and documenting various parameters of the library, conducting tests in controlled and open environments. The goal is to comprehend how the library influences map generation by inferring parameter values through experimentation.",
+      "imagen": "assets/tesisNavegacion.png",
+      "tags": ["Navigation", "Thesis"],
+      "estado": "Done",
+      "link": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/fded7029-967a-4afd-92da-9179380abc24/content"
+    },
+    {
+      "id": 12,
+      "titulo": "Navigation Based On Reinforcement Learning",
+      "fecha": "2020",
+      "contenido": "Cesar Garrido's degree project aims to enable Ópera, a robot, to navigate closed environments adeptly, addressing people and reaching destinations without collisions. The project hypothesizes that the robot's trajectories, planned and executed through a learning-from-experience method, will be both smooth and reactive",
+      "imagen": "assets/navigationReward.png",
+      "tags": ["Navigation", "Thesis"],
+      "estado": "Done",
+      "link": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/27ac5dad-5e73-48bc-b478-eefddeb87556/content"
+    },
+    {
+      "id": 13,
+      "titulo": "Opera Learns To Play Line 4 Through Reinforcement Learning",
+      "fecha": "2019",
+      "contenido": "Juan José García led a project aiming to teach an pepper robot to devise game strategies for two-player board games, using the Line 4 game as the testing platform. The project applied reinforcement learning, specifically the Q-learning algorithm with a neural network, to learn from experience. Opponents were designed with varying levels of complexity in their plays, utilizing game theory principles like expectimax and minimax. The objective was for the Opera to excel in playing Line 4 by predicting the opponent's behavior several moves ahead.",
+      "imagen": "assets/conecta4.png",
+      "tags": ["Interface", "Thesis"],
+      "estado": "Done",
+      "link": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/94ba9736-b454-4513-9fba-b7e25b3866dc/content"
+    },
+    {
+      "id": 14,
+      "titulo": "Customer Service With Facial Recognition",
+      "fecha": "2019",
+      "contenido": "Adelaida Zuluaga's project focuses on enhancing a robot's ability to identify and recognize users locally through facial recognition techniques. The Viola-Jones algorithm was employed to detect individuals, achieving an impressive 98% accuracy within the robot's visual range. The Eigenfaces algorithm, coupled with SVMs one vs all, facilitated person recognition based on their names. Noteworthy is the algorithm's flexibility, allowing the robot to be trained on new classes and recognize new individuals during interactions. A significant contribution lies in providing the robot with local capabilities for identification and recognition, offering a reliable backup in case of cloud service failures.",
+      "imagen": "assets/fr.png",
+      "tags": ["Perception", "Thesis"],
+      "estado": "Done",
+      "link": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/7e52faf7-09cd-445b-9c77-7f4d91c1f367/content"
+    },
+    {
+      "id": 15,
+      "titulo": "Simplified Robot Motion: Robowflex Integration for Pepper",
+      "fecha": "2023",
+      "contenido": "Aims to streamline Pepper robot motion programming through Robowflex integration. This simplifies trajectories, enables benchmarking, and enhances the accessibility for motion planning.",
+      "imagen": "assets/manip-robow.jpg",
+      "tags": ["Manipulation"],
+      "estado": "In progress",
+      "link": "/robowflex"
+    }
+  ]
+}
