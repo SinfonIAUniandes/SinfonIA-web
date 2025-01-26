@@ -1,214 +1,239 @@
+<!-- slider ---------------------------------------------------------------------------------------------------------------------->
 
-  <!-- slider ---------------------------------------------------------------------------------------------------------------------->
-
-  <div id="carouselExampleRide" class="carousel slide carousel-fade" data-bs-ride="true">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets\equipo1.jpg" class="d-block w-100 responsive-img" alt="slider image 1" >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Meet our team!</h5>
-          <p></p>
-        </div>
+<div
+  id="carouselExampleRide"
+  class="carousel slide carousel-fade"
+  data-bs-ride="true"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="assets\sinfonia-gana-robocup-2024-web.png"
+        class="d-block w-100 responsive-img"
+        alt="slider image 1"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <style>
+          .carousel-caption h5 {
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+          }
+          .carousel-caption p {
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+          }
+        </style>
+        <h5>Robocup&#64;Home 2024 SSPL Winners!</h5>
+        <br />
+        <p>
+          SinfonIA won first place in this league before it officially closed,
+          showcasing its expertise in social robotics and technical skills.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets\robocup2023.jpg" class="d-block w-100 responsive-img" alt="slider image 2">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Robocup 2023 Burdeos</h5>
-          <p>We participated in RoboCup 2023 in Bordeaux, France, and are delighted to share that we achieved
-            an outstanding second place.</p>
-        </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="assets\RosMeetup-Team.jpeg"
+        class="d-block w-100 responsive-img"
+        alt="slider image 3"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Participation in ROS Meetup Bogotá 2024</h5>
+        <br />
+        <p>
+          SinfonIA attended the first ROS Meetup in Bogotá, a groundbreaking
+          event for robotics in LATAM. Held at the Pontificia Universidad
+          Javeriana, it brought together enthusiasts and experts to share
+          knowledge and strengthen the robotics community in the region.
+        </p>
       </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+    </div>
+    <div class="carousel-item">
+      <img
+        src="assets\equipo1.jpg"
+        class="d-block w-100 responsive-img"
+        alt="slider image 1"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Our team!</h5>
+        <br />
+        <p>
+          Meet the people that make bringing Social Robotics to Colombia a
+          possibility
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="assets\robocup2023.jpg"
+        class="d-block w-100 responsive-img"
+        alt="slider image 2"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Robocup 2023 Burdeos</h5>
+        <br />
+        <p>
+          We participated in RoboCup 2023 in Bordeaux, France, and are delighted
+          to share that we achieved an outstanding second place.
+        </p>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleRide"
+      data-bs-slide="prev"
+    >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleRide"
+      data-bs-slide="next"
+    >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
 
-
   <!-- news ------------------------------------------------------------------------------------------------------------>
   <h1 class="heading-3" style="margin: 20px">Recent News</h1>
   <section>
-    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 10px; background-color:snow">
-      <div class="col-md-3">
+    <div
+      class="row row-cols-1 row-cols-md-3 g-4"
+      style="margin: 10px; background-color: snow"
+    >
+      <div class="col-md-3" *ngFor="let noticia of noticias">
         <div class="card h-100">
-          <img src="assets/equipo1.jpg" class="card-img-top" alt="primera noticia" height="200px">
+          <img
+            [src]="noticia.imagen"
+            class="card-img-top"
+            [alt]="noticia.titulo"
+            style="object-fit: cover; height: 200px"
+          />
           <div class="card-body">
-            <h5 class="card-title">We got new members!</h5>
-            <p class="card-text paragraph-light1" >Hey, great news! We've just opened calls and we're excited to tell you that we've welcomed new members to all of the group's tools. There are fresh faces and new energy, so get ready to meet some great folks at our activities!</p>
+            <h5 class="card-title">{{ noticia.titulo }}</h5>
+            <p class="card-text paragraph-light1">{{ noticia.contenido }}</p>
           </div>
           <div class="card-footer">
-            <small class="text-body-secondary">Updated on 17 november, 2023</small>
+            <small class="text-body-secondary"
+              >Updated on {{ noticia.fecha | date : "d MMMM, y" }}</small
+            >
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="assets\expoestudiante2023.jpg" class="card-img-top" alt="..." height="200px">
-          <div class="card-body">
-            <h5 class="card-title">Expoestudiantes at Corferias</h5>
-            <p class="card-text paragraph-light1">We were at Expoestudiante 2023 representing Universidad de los Andes, presenting our group as an amazing opportunity for students. It was great to share about what we do and how they can join this exciting adventure.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Updated on 17 november, 2023</small>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="assets\sinfoniaRobocup.jpg" class="card-img-top" alt="..." height="200px">
-          <div class="card-body">
-            <h5 class="card-title">Robocup 2023!</h5>
-            <p class="card-text paragraph-light1">We participated in the RoboCup 2023 in Bordeaux, France, and managed to win second place for the university. Despite the challenges, we were able to complete most of the tasks, which brings us significantly closer to first place. We are excited about this achievement and are working hard to reach new goals.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Updated on 5 november, 2023</small>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="assets\robocup2022.png" class="card-img-top" alt="..." height="200px">
-          <div class="card-body">
-            <h5 class="card-title">Robocup 2022!</h5>
-            <p class="card-text paragraph-light1">Last year, in 2022, we participated in RoboCup in Bangkok, Thailand, and secured the second place for our university. Despite the challenges, we successfully completed most of the tasks, solidifying our position as the second-best in the competition.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Updated on 28 october, 2023</small>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 30px;"></div>
+      <div style="margin-top: 30px"></div>
     </div>
   </section>
 
- <!-- Projects ----------------------------------------------------------------------------------------------------------------------->
- <h1 class="heading-3" style="margin: 20px">New Projects</h1>
- <section class="dark">
-	<div class="container py-4">
-
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/GSPR" routerLinkActive="active">
-				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/GSPR" routerLinkActive="active">GPSR autonomy through different large language models</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2023
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">The idea with this is to give autonomy to the robot thanks to the processing of instructions using a large language model like GPT or Llama
+  <!-- Projects ----------------------------------------------------------------------------------------------------------------------->
+  <h1 class="heading-3" style="margin: 20px">New Projects</h1>
+  <section class="dark">
+    <div class="container py-4">
+      <article
+        class="postcard dark blue"
+        *ngFor="let proyecto of proyectosDestacados"
+      >
+          <img
+            class="postcard__img"
+            [src]="proyecto.imagen"
+            [alt]="proyecto.titulo"
+          />
+        <div class="postcard__text">
+          <h1 class="postcard__title blue">
+              {{ proyecto.titulo }}
+          </h1>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt paragraph-light">
+            {{ proyecto.contenido }}
+          </div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item" *ngFor="let tag of proyecto.tags">
+              <i class="fas fa-tag mr-2"></i>{{ tag }}
+            </li>
+          </ul>
         </div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Task</li>
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a routerLink="/GSPR" routerLinkActive="active"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
+      </article>
+    </div>
+  </section>
 
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/robowflex">
-				<img class="postcard__img" src="assets\manip-robow.jpg" alt="Image Title" />
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/robowflex">Simplified Robot Motion: Robowflex Integration for Pepper</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Sep 2023 - Current
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">Aims to streamline Pepper robot motion programming through Robowflex integration. This simplifies trajectories, enables benchmarking, and enhances the accessibility for motion planning.
-        </div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Manipulation</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>In progress</li>
-					<li class="tag__item play red">
-						<a routerLink="/robowflex"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/webRemote" routerLinkActive="active">
-				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/webRemote" routerLinkActive="active">Web Remote Controller</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Sep 2023 - Current
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">It focuses on the implementation of a local web server that uses vueJS, django and ros to interact with the robot's toolkit, allowing control and monitoring from web devices.</div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Interface</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>In progress</li>
-					<li class="tag__item play green">
-						<a routerLink="/webRemote" routerLinkActive="active"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-	</div>
-</section>
-
-<!-- sponsors------------------------------------------------------------------------------------------------------------>
+  <!-- sponsors------------------------------------------------------------------------------------------------------------>
   <h1 class="heading-3" style="margin: 20px">Our sponsors</h1>
 
-<div class="wrapper">
-  <div class="slider1">
-    <div class="slide1">
-      <img src="assets\camaraComercio.png"/>
-      <img src="assets\celsia.png"/>
-      <img src="assets\bbva.png"/>
-      <img src="assets\hero.jpg"/>
-      <img src="assets\isis.png"/>
-      <img src="assets\iele.png"/>
-    </div>
+  <div class="wrapper">
+    <div class="slider1">
+      <div class="slide1">
+        <img src="assets\camaraComercio.png" />
+        <img src="assets\celsia.png" />
+        <img src="assets\bbva.png" />
+        <img src="assets\hero.jpg" />
+        <img src="assets\isis.png" />
+        <img src="assets\iele.png" />
+      </div>
 
-    <div class="slide1">
-      <img src="assets\camaraComercio.png"/>
-      <img src="assets\celsia.png"/>
-      <img src="assets\bbva.png"/>
-      <img src="assets\hero.jpg"/>
-      <img src="assets\isis.png"/>
-      <img src="assets\iele.png"/>
+      <div class="slide1">
+        <img src="assets\camaraComercio.png" />
+        <img src="assets\celsia.png" />
+        <img src="assets\bbva.png" />
+        <img src="assets\hero.jpg" />
+        <img src="assets\isis.png" />
+        <img src="assets\iele.png" />
+      </div>
     </div>
-
   </div>
+
+  <!-- contact------------------------------------------------------------------------------------------------------------>
+  <section class="contact">
+    <div class="contact-form">
+      <h3>Do you want to work with us?</h3>
+      <h3>Drop us a line!</h3>
+      <p>Tell us how you want to work with us and we will be in touch soon.</p>
+
+      <form
+        action="https://formsubmit.co/s.rodriguezm2@uniandes.edu.co"
+        method="POST"
+      >
+        <p class="form-p">NAME</p>
+        <input
+          type="text"
+          name="Name"
+          placeholder="Enter your name or company"
+          required
+        />
+        <p class="form-p">EMAIL</p>
+        <input
+          type="email"
+          name="Email"
+          placeholder="Enter your email"
+          required
+        />
+        <p class="form-p">PHONE NUMBER</p>
+        <input
+          type="tel"
+          name="Number"
+          placeholder="Enter your phone number (optional)"
+        />
+        <p class="form-p">MESSAGE</p>
+        <textarea
+          name="Message"
+          placeholder="Enter your message, we will read it soon!"
+          required
+        >
+        </textarea>
+        <button class="submit" type="submit">SUBMIT</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="https://sinfoniauniandes.github.io/SinfonIA-web"
+        />
+        <input type="hidden" name="_cc" value="sinfonia@uniandes.edu.co" />
+      </form>
+    </div>
+  </section>
 </div>
-
-<!-- contact------------------------------------------------------------------------------------------------------------>
-<section class="contact">
-  <div class="contact-form">
-    <h3> Do you want to work with us?</h3>
-    <h3> Drop us a line!</h3>
-    <p>Tell us how you want to work with us and we will be in touch soon.</p>
-
-    <form action="https://formsubmit.co/s.rodriguezm2@uniandes.edu.co" method="POST">
-      <p class="form-p">NAME</p>
-      <input type="text" name="Name" placeholder="Enter your name or company" required>
-      <p class="form-p">EMAIL</p>
-      <input type="email" name="Email" placeholder="Enter your email" required>
-      <p class="form-p">PHONE NUMBER</p>
-      <input type="tel" name="Number" placeholder="Enter your phone number (optional)">
-      <p class="form-p">MESSAGE</p>
-      <textarea name="Message" placeholder="Enter your message, we will read it soon!" required> </textarea>
-      <button class="submit" type="submit">SUBMIT</button>
-      <input type="hidden" name="_next" value="https://sinfoniauniandes.github.io/SinfonIA-web">
-      <input type="hidden" name="_cc" value="sinfonia@uniandes.edu.co">
-    </form>
-  </div>
-</section>

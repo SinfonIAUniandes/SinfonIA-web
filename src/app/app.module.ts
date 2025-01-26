@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,10 @@ import { RobowflexComponent } from './robowflex/robowflex.component';
 import { WebRemoteComponent } from './webRemote/webRemote.component';
 import { TDP2023Component } from './TDP2023/TDP2023.component';
 import { VideosComponent } from './videos/videos.component';
+import { NewsComponent } from './news/news.component';
+import { ResearchComponent } from './research/research.component';
+
+import { SafePipe } from './shared/pipes/safe.pipe';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,13 +30,15 @@ const routes: Routes = [
   { path: 'webRemote', component: WebRemoteComponent },
   { path: 'tdp', component: TDP2023Component },
   { path: 'videos', component: VideosComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'research', component: ResearchComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
 
 @NgModule({
-  declarations: [									
+  declarations: [
       AppComponent,
       AboutComponent,
       HomeComponent,
@@ -42,12 +49,16 @@ const routes: Routes = [
       RobowflexComponent,
       WebRemoteComponent,
       TDP2023Component,
-      VideosComponent
+      VideosComponent,
+      NewsComponent,
+      ResearchComponent,
+      SafePipe
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

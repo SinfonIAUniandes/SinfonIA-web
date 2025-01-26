@@ -1,202 +1,30 @@
 <h1 class="heading-3" style="margin: 20px">Meet our projects</h1>
- <section class="dark">
-	<div class="container py-4">
-
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/GSPR" routerLinkActive="active">
-				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/GSPR" routerLinkActive="active">GPSR autonomy through different large language models</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2023
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">The idea with this is to give autonomy to the robot thanks to the processing of instructions using a large language model like GPT or Llama
+<section class="dark">
+  <div class="container py-4">
+    <article class="postcard dark blue" *ngFor="let proyecto of proyectos">
+        <img class="postcard__img" [src]="proyecto.imagen" [alt]="proyecto.titulo"/>
+      <div class="postcard__text">
+        <h1 class="postcard__title blue">
+          {{proyecto.titulo}}
+        </h1>
+        <div class="postcard__subtitle small">
+          <time>
+            <i class="fas fa-calendar-alt mr-2"></i>{{proyecto.fecha}}
+          </time>
         </div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Task</li>
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a routerLink="/GSPR" routerLinkActive="active"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/robowflex">
-				<img class="postcard__img" src="assets\manip-robow.jpg" alt="Image Title" />
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/robowflex">Simplified Robot Motion: Robowflex Integration for Pepper</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Sep 2023 - Current
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">Aims to streamline Pepper robot motion programming through Robowflex integration. This simplifies trajectories, enables benchmarking, and enhances the accessibility for motion planning.
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt paragraph-light">
+          {{proyecto.contenido}}
         </div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Manipulation</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>In progress</li>
-					<li class="tag__item play red">
-						<a routerLink="/robowflex"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" routerLink="/webRemote" routerLinkActive="active">
-				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a routerLink="/webRemote" routerLinkActive="active">Web Remote Controller</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Sep 2023 - Current
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">It focuses on the implementation of a local web server that uses vueJS, django and ros to interact with the robot's toolkit, allowing control and monitoring from web devices.</div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Interface</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>In progress</li>
-					<li class="tag__item play green">
-						<a routerLink="/webRemote" routerLinkActive="active"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-    <article class="postcard dark blue">
-			<a class="postcard__img_link" href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/fded7029-967a-4afd-92da-9179380abc24/content">
-				<img class="postcard__img" src="assets\tesisNavegacion.png" alt="Image Title" style="width: min-content;"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/fded7029-967a-4afd-92da-9179380abc24/content">Mapping University Space with Humanoid Robot
-          Pepper</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2021
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">
-
-          This project delves into the navigation domain, specifically exploring a robot's ability to generate maps of
-          environments and self-locate. Focused on the humanoid robot Pepper, the study centers on understanding the RTAB-Map
-           (Real-Time Appearance Based Mapping) library of ROS. This library employs a graph-based SLAM approach to map static
-            scenes. The project involves studying and documenting various parameters of the library, conducting tests in controlled
-             and open environments. The goal is to comprehend how the library influences map generation by inferring parameter
-              values through experimentation.
-        </div>
-				<ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Navigation</li>
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/fded7029-967a-4afd-92da-9179380abc24/content"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-    <article class="postcard dark blue">
-			<a class="postcard__img_link" href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/27ac5dad-5e73-48bc-b478-eefddeb87556/content">
-				<img class="postcard__img" src="assets\navigationReward.png" alt="Image Title" style="width: min-content;"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/27ac5dad-5e73-48bc-b478-eefddeb87556/content">Navigation Based On Reinforcement Learning</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2020
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">
-
-        Cesar Garrido's degree project aims to enable Ópera, a robot, to navigate closed environments adeptly,
-        addressing people and reaching destinations without collisions. The project hypothesizes that the robot's
-          trajectories, planned and executed through a learning-from-experience method, will be both smooth and reactive
-        </div>
-				<ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Navigation</li>
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/27ac5dad-5e73-48bc-b478-eefddeb87556/content"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-    <article class="postcard dark blue">
-			<a class="postcard__img_link" href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/94ba9736-b454-4513-9fba-b7e25b3866dc/content">
-				<img class="postcard__img" src="assets\conecta4.png" alt="Image Title" style="width: min-content;"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/94ba9736-b454-4513-9fba-b7e25b3866dc/content">Opera Learns To Play Line 4 Through Reinforcement Learning</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2019
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">
-          Juan José García led a project aiming to teach an pepper robot to devise game strategies for two-player board games,
-           using the Line 4 game as the testing platform. The project applied reinforcement learning, specifically the
-            Q-learning algorithm with a neural network, to learn from experience. Opponents were designed with varying
-            levels of complexity in their plays, utilizing game theory principles like expectimax and minimax.
-            The objective was for the Opera to excel in playing Line 4 by predicting the opponent's behavior several moves ahead.
-        </div>
-				<ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Interface</li>
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/94ba9736-b454-4513-9fba-b7e25b3866dc/content"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-    <article class="postcard dark blue">
-			<a class="postcard__img_link" href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/7e52faf7-09cd-445b-9c77-7f4d91c1f367/content">
-				<img class="postcard__img" src="assets\fr.png" alt="Image Title" style="width: min-content;"/>
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/7e52faf7-09cd-445b-9c77-7f4d91c1f367/content">Customer Service With Facial Recognition</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i> 2019
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt paragraph-light">
-          Adelaida Zuluaga's project focuses on enhancing a robot's ability to identify and recognize users locally through
-           facial recognition techniques. The Viola-Jones algorithm was employed to detect individuals, achieving an impressive
-            98% accuracy within the robot's visual range. The Eigenfaces algorithm, coupled with SVMs one vs all, facilitated
-             person recognition based on their names. Noteworthy is the algorithm's flexibility, allowing the robot to be
-              trained on new classes and recognize new individuals during interactions. A significant contribution lies in
-               providing the robot with local capabilities for identification and recognition, offering a reliable backup in
-                case of cloud service failures.
-        </div>
-				<ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Perception</li>
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Thesis</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Done</li>
-					<li class="tag__item play blue">
-						<a href="https://repositorio.uniandes.edu.co/server/api/core/bitstreams/7e52faf7-09cd-445b-9c77-7f4d91c1f367/content"><i class="fas fa-play mr-2"></i>Read more</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-
-	</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item" *ngFor="let tag of proyecto.tags">
+            <i class="fas fa-tag mr-2"></i>{{tag}}
+          </li>
+          <li class="tag__item">
+            <i class="fas fa-clock mr-2"></i>{{proyecto.estado}}
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
 </section>

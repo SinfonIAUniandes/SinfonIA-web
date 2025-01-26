@@ -1,0 +1,12 @@
+<h1 class="heading-3" style="margin: 20px">Our Research Papers</h1>
+
+<div class="container">
+  <div *ngFor="let paper of papers" class="paper-container">
+    <div class="paper-section">
+      <h2 class="paper-title">{{paper.title}}</h2>
+      <div class="pdf-viewer">
+        <iframe [src]="paper.path | safe" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Robocup 2022!",
+      "fecha": "2023-10-28",
+      "contenido": "Last year, in 2022, we participated in RoboCup in Bangkok, Thailand, and secured the second place for our university. Despite the challenges, we successfully completed most of the tasks, solidifying our position as the second-best in the competition.",
+      "imagen": "assets/robocup2022.png"
+    },
+    {
+      "id": 2,
+      "titulo": "Robocup 2023!",
+      "fecha": "2023-11-05",
+      "contenido": "We participated in the RoboCup 2023 in Bordeaux, France, and managed to win second place for the university. Despite the challenges, we were able to complete most of the tasks, which brings us significantly closer to first place. We are excited about this achievement and are working hard to reach new goals.",
+      "imagen": "assets/sinfoniaRobocup.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Expoestudiante at Corferias",
+      "fecha": "2023-11-17",
+      "contenido": "We were at Expoestudiante 2023 representing Universidad de los Andes, presenting our group as an amazing opportunity for students. It was great to share about what we do and how they can join this exciting adventure.",
+      "imagen": "assets/expoestudiante2023.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "We got new members!",
+      "fecha": "2023-11-17",
+      "contenido": "Hey, great news! We've just opened calls and we're excited to tell you that we've welcomed new members to all of the group's tools. There are fresh faces and new energy, so get ready to meet some great folks at our activities!",
+      "imagen": "assets/equipo1.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Victory at RoboCup@Home SSPL 2024",
+      "fecha": "2024-07-21",
+      "contenido": "SinfonIA won first place in this league before it officially closed, showcasing its expertise in social robotics and technical skills.",
+      "imagen": "assets/Trophy-Robocup.jpeg"
+    },
+    {
+      "id": 6,
+      "titulo": "Presentation to new students",
+      "fecha": "2025-01-13",
+      "contenido": "We participated in the university’s welcome event for new students, using Pepper to greet and engage them, strengthening the group's visibility on campus.",
+      "imagen": "assets/Welcome.jpeg"
+    }
+    ,
+    {
+      "id": 7,
+      "titulo": "Participation in ERA 2048",
+      "fecha": "2024-10-08",
+      "contenido": "SinfonIA welcomed guests at ERA 2048 with the Pepper robot, showcasing its role in innovative and immersive educational experiences.",
+      "imagen": "assets/era-2048-n-desk.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "Participation in Siemens Sales Channels Convention 2024",
+      "fecha": "2024-11-08",
+      "contenido": "SinfonIA showcased robotics and AI at the Siemens Sales Channels Convention 2024, highlighting advancements in AI, industrial copilot systems, 5G, and the Industrial Metaverse.",
+      "imagen": "assets/Siemens.jpeg"
+    }
+  ]
+}
